@@ -130,6 +130,9 @@ if (range) {
   range.addEventListener("input", handleRangeChange);
 }
 
+if (mode) {
+  mode.addEventListener("click", handleModeClick);
+}
 // filling 이 맞는지 아닌지 확인하기 위해 임의로 만들어주자
 // 즉, 지금 mode가 fill인지 paint인지 구분하기 위해
 let filling = false;
@@ -143,8 +146,4 @@ function handleModeClick() {
     filling = true;
     mode.innerText = "Paint";
   }
-}
-
-if (mode) {
-  mode.addEventListener("click", handleModeClick);
 }
